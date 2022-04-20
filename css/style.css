@@ -5,9 +5,9 @@
 }
 
 header {
-    background: rgb(58,193,15);
-    background: linear-gradient(246deg, rgba(58,193,15,1) 0%, rgba(0,221,255,1) 100%); 
-    padding: 1rem;
+    background: #120a4e;
+    /* background: linear-gradient(246deg, rgba(58,193,15,1) 0%, rgba(0,221,255,1) 100%); */
+    border-bottom: 6px solid #59fb5c;
 }
 
 header .row {
@@ -22,8 +22,27 @@ header .row {
     color: #fff;
 }
 
+#header-logo img {
+    width: 50%;
+}
+
+#header-search-col .btn {
+    padding: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    background: #59fb5c;
+    outline: 4px solid #fff;
+    color: #6717cd;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+#header-search-col .btn i{
+    margin-right: 1rem;
+}
+
 #header-search-input  {
-    padding-top: 1rem;
+    padding-top: 3rem;
 }
 
 
@@ -36,6 +55,7 @@ header .row {
     background-color: #fff;
 }
 
+
 #col-events {
     padding: 1rem;
 }
@@ -46,6 +66,11 @@ header .row {
     border-radius: 10px;
     /*outline:1px solid #a7a7a7;*/
     margin: 2rem 1rem;
+}
+
+.home-event-post:hover {
+    background-color: #f4f4f4;
+    outline:1px solid #6717cd;
 }
 
 .event-post-user {
@@ -100,34 +125,79 @@ header .row {
     margin-right: .6rem; 
 }
 
-.event-post-text .event-tag-text {
+.event-tag-text {
     padding: .4rem .6rem;
     border-radius: 5px;
     outline: 1px solid #a7a7a7;
 }
-#event-attendee-text {
 
-    background-color: #f0ce71;
+#event-location-text {
+    background-color: #ff8664;
+}
+
+#event-attendee-text {
+    background-color: #7ceef4;
 }
 
 #event-mentor-text {
 
-    background-color: #b6fab1;
+    background-color: #d3fa84;
 }
 
 #event-expectlist-text {
-    background-color: #e95d5d;
+    background-color: #dc73f1;
 }
 
 .event-post-buttons {
     margin: 0;
     padding: 1rem;
+    
 }
 
-.event-post-buttons .btn {
-    background-color: #6fe452;
+.event-post-buttons .btn, .modal-body .btn {
+    background-color: #59fb5c;
     outline: 1px solid #2a631c;
     font-size: 20px;
+    margin-right: .8rem;
+    margin-top: 1rem;
+}
+
+.buttonCreateMeeting {
+    background-color: #f5f5f5;
+    color:#6717cd;
+    padding: .8rem;
+    font-weight: 700;
+    float: center;
+    margin: 1rem .8rem 0 1rem;
+    outline:2px solid #59fb5c;
+    font-size: 1.4rem;
+    width: 100%;
+    border-radius: 5px;
+    font-style: italic                                                                                                                                                                               ;
+}
+
+
+#buttonCreateMeeting {
+    background-color: #59fb5c;
+    color:#6717cd;
+    padding: .8rem;
+    font-weight: 700;
+    float: center;
+    margin: 1rem .8rem 0 1rem;
+    outline:2px solid #6717cd;
+    font-size: 1.4rem;
+    width: 100%;
+}
+
+#buttonCreateMeeting:hover {
+    background-color: #6717cd;
+    color:#59fb5c;
+    outline:2px solid #59fb5c;
+}
+
+#buttonCreateMeeting i{
+    margin-right: 1rem;
+    
 }
 
 .event-post-buttons .btn:hover {
@@ -147,7 +217,7 @@ header .row {
 
 .right-menu-ul li{
     background-color: #f5f5f5;
-    color:#2cb908;
+    color:#6717cd;
     padding: 1rem 3rem;
     margin: 1rem 0;
     margin-top: 0;
@@ -164,4 +234,132 @@ header .row {
 .right-menu-ul li:hover{
     background-color: #e0e0e0;
     outline: 1px solid #006408;
+}
+
+.modal-body label {
+    color:#6717cd;
+    font-size:1.2rem;
+    font-weight: 600;
+}
+
+.warning-input {
+    background-color: #ecff5e;
+    padding: 4px;
+    font-weight: 400;
+    border-radius: 5px;
+    outline: 1px solid #6717cd;
+    margin: 4px 0;
+}
+
+
+/**            Profile Page               **/
+
+#profile-page  {
+    padding: 10px;
+}
+
+.profile-page-head {
+    padding: 20px;
+    background: linear-gradient(246deg, rgba(58,193,15,1) 0%, rgba(0,221,255,1) 100%);
+    border-radius: 25px;
+}
+
+#profile-page  #profile-name-text {
+    margin-top: 20px;
+}
+
+
+#profile-page  #profile-name-text h3{
+    font-size: 48px;
+    color: white;
+}
+
+
+#profile-page #profile-pic img {
+    width: 220px;
+}
+
+#profile-button-options button{
+    margin:12px;
+}
+
+#profile-button-options .btn {
+    background-color: #fff;
+    outline:3px solid #6717cd;
+}
+
+#profile-name-text a {
+    color:red;
+    text-decoration: none;
+}
+
+/* #profile-name-text i{
+    color:purple;
+} */
+
+
+
+
+
+
+
+
+ /** Login - Index **/
+
+#maincontainer-index{
+    padding: 2rem;
+}
+
+#row-login {
+    padding: 3rem;
+}
+
+#row-login  {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+
+#row-login input {
+    margin-bottom: 1.2rem;
+}
+
+#row-login button {
+    margin-top: 4px;
+    padding: .4rem 3rem;
+    background-color: #120a4e;
+    color: #59fb5c;
+    font-weight: 700;
+    outline: 2px solid #59fb5c;
+}
+
+#row-about,  #row-faq, #row-register {
+    text-align: center;
+    padding: 3rem;
+    margin-top: 3rem;
+    box-shadow: 0 2px 0 #6717cd inset;
+    box-shadow: 2px 4px 0 #59fb5c inset;
+}
+
+
+#row-register input, .form-group {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+
+#row-register .col-md-6 {
+    text-align: left;
+
+}
+
+
+
+
+
+
+@media  (max-width: 1200px) { 
+    .event-post-buttons button  {
+        margin-bottom: 10px;
+    }
 }
