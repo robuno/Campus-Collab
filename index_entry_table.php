@@ -1,4 +1,5 @@
 <?php 
+# admin panel posts table
 include "config.php";
 
 //write the query to get data from users table
