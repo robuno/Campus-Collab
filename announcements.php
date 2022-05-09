@@ -98,6 +98,7 @@ $lastName_2 = $_SESSION["lastName"];
                             <div class="form-group">
                             <!-- <label>Announcement Owner</label> -->
                             <input type="hidden" name="annowner" id="annowner" class="form-control"  value="<?php echo $firstName_2." ".$lastName_2; ?>">
+                            <input type="hidden" name="annownerid" id="annownerid" class="form-control"  value="<?php echo $userid_2; ?>">
                             <input type="hidden" name="post_id" id="post_id" class="form-control">
                             </div>
 

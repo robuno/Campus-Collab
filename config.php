@@ -6,7 +6,7 @@ if (!isset($_SESSION)) session_start();
 $servername = "localhost";
 $username = "root"; // default username for localhost is root
 $password = ""; // default password for localhost is empty
-$dbname = "abelcrud"; // database name
+$dbname = "meetup3"; // database name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

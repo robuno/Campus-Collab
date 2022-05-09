@@ -85,6 +85,7 @@ $lastName_2 = $_SESSION["lastName"];
                             <div class="form-group">
                             <!-- <label>Post Owner</label> -->
                             <input type="hidden" name="postowner" id="postowner" class="form-control"  value="<?php echo $firstName_2." ".$lastName_2; ?>">
+                            <input type="hidden" name="postownerid" id="postownerid" class="form-control"  value="<?php echo $userid_2; ?>">
                             <input type="hidden" name="post_id" id="post_id" class="form-control">
                             </div>
 
@@ -99,49 +100,48 @@ $lastName_2 = $_SESSION["lastName"];
                             <input type="date" name="date" id="date" class="form-control">
                             </div>
 
-                            <!-- <div class="form-group">
-                            
-                            <input type="text" name="mentorinfo" id="mentorinfo" class="form-control">
-                            </div> -->
                             <br>
 
-                            <!-- <div class="form-group">
-                            <label>Post Type</label><br>
-                            <input type="radio" name="posttype" value="announcements"> Announcement
-                            <input type="radio" name="posttype" value="studymeeting" checked> Study Meeting
-                            <input type="radio" name="posttype" value="studentbranch"> Student Branch
-                            </div> -->
+                            <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                <label>Course Code</label>
+                                <div class="warning-input"><i class="fa-solid fa-circle-info"></i>If this meeting is not related to a specific course, you can leave it blank.</div>
+                                <input type="text" name="coursecode" id="coursecode" class="form-control">
+                                </div>
 
 
-                            <div class="form-group">
-                            <label>Course Code</label>
-                            <div class="warning-input"><i class="fa-solid fa-circle-info"></i>If this meeting is not related to a specific course, you can leave it blank.</div>
-                            <input type="text" name="coursecode" id="coursecode" class="form-control">
+
                             </div>
 
 
-                            <div class="form-group">
-                            <label>Student Branch</label>
-                            <div class="warning-input"><i class="fa-solid fa-circle-info"></i>If this meeting is not related to a student branch, you can leave it blank.</div>
-                            <select name="studentbranch" class= "form-class-selector">              
-                            <?php $postTypeList='';
-                                $queryCategory = "SELECT * FROM studentclubs ORDER BY ID ASC";
-                                $resultCategory = mysqli_query($conn, $queryCategory);
-                                while ($row = @mysqli_fetch_array($resultCategory)) {
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                <label>Student Branch</label>
+                                <div class="warning-input"><i class="fa-solid fa-circle-info"></i>If this meeting is not related to a student branch, you can leave it blank.</div>
+                                <select name="studentbranch" class= "form-class-selector">              
+                                <?php $postTypeList='';
+                                    $queryCategory = "SELECT * FROM studentclubs ORDER BY ID ASC";
+                                    $resultCategory = mysqli_query($conn, $queryCategory);
+                                    while ($row = @mysqli_fetch_array($resultCategory)) {
 
-                                    if ($row["id"] == $id) {
-                                        $selectedType = ' selected';
+                                        if ($row["id"] == $id) {
+                                            $selectedType = ' selected';
+                                        }
+                                        else {
+                                            $selectedType ='';
+                                        }
+                                        $postTypeList .= '<option value="'.$row["id"].'" '.$selectedType.'>'.$row["clubname"].'</option>';
                                     }
-                                    else {
-                                        $selectedType ='';
-                                    }
-                                    $postTypeList .= '<option value="'.$row["id"].'" '.$selectedType.'>'.$row["clubname"].'</option>';
-                                }
 
-                                echo $postTypeList; ?>
-                                                            </select>
+                                    echo $postTypeList; ?>
+                                                                </select>
+                                </div>
+                            
                             </div>
 
+                            </div>
 
                             <br>
                             <div class="form-group">

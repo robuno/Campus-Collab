@@ -26,7 +26,7 @@ header .row {
     width: 50%;
 }
 
-#header-search-col .btn {
+#header-search-col .btn  {
     padding: 1rem;
     margin-top: 2rem;
     width: 100%;
@@ -71,6 +71,13 @@ header .row {
 .home-event-post:hover {
     background-color: #f4f4f4;
     outline:1px solid #6717cd;
+    
+    -webkit-box-shadow: 0px 0px 12px 1px rgb(146, 79, 233);
+    -moz-box-shadow: 0px 0px 12px 1px rgb(135, 60, 234);
+    box-shadow: 0px 0px 12px 1px rgb(172, 109, 255);
+    transition: .1s;
+   
+    
 }
 
 .event-post-user {
@@ -132,7 +139,7 @@ header .row {
 }
 
 #event-location-text {
-    background-color: #ff8664;
+    background-color: #c9ffd1;
 }
 
 #event-attendee-text {
@@ -145,7 +152,7 @@ header .row {
 }
 
 #event-expectlist-text {
-    background-color: #dc73f1;
+    background-color: #f8cbff;
 }
 
 .event-post-buttons {
@@ -154,12 +161,20 @@ header .row {
     
 }
 
-.event-post-buttons .btn, .modal-body .btn {
+.event-post-buttons .btn, .modal-body .btn{
     background-color: #59fb5c;
     outline: 1px solid #2a631c;
     font-size: 20px;
     margin-right: .8rem;
     margin-top: 1rem;
+}
+
+
+#singlePostComments .btn {
+    background-color: #59fb5c;
+    outline: 1px solid #2a631c;
+    font-size: 20px;
+    margin: .2rem 0;
 }
 
 .buttonCreateMeeting {
@@ -200,6 +215,12 @@ header .row {
     
 }
 
+#user_form select.form-class-selector {
+    width: 100%;
+    padding: 6px 0;
+    border-radius: 5px;
+}
+
 .event-post-buttons .btn:hover {
     background-color: #52a33e;
 }
@@ -207,6 +228,7 @@ header .row {
 .right-menu-ul {
     padding: 3rem 0;
     list-style: none;
+    
 }
 
 .right-menu-ul a {
@@ -215,7 +237,37 @@ header .row {
 
 }
 
-.right-menu-ul li{
+.right-nav-list {
+    background-color: #f5f5f5;
+     color:#6717cd;
+    margin-top: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-radius: 8px;
+    
+
+}
+
+.right-nav-list li {
+    padding: 1.6rem 2rem;
+    color:#6717cd;
+    border-radius: 8px;
+}
+
+.right-nav-list li:hover {
+    border-radius: 8px;
+    background-color: #e0e0e0;
+    outline: 1px solid #006408;
+}
+
+.right-nav-list li i {
+    margin-right: 2rem;
+    color: #000;
+}
+
+
+
+/* .right-menu-ul li{
     background-color: #f5f5f5;
     color:#6717cd;
     padding: 1rem 3rem;
@@ -234,7 +286,7 @@ header .row {
 .right-menu-ul li:hover{
     background-color: #e0e0e0;
     outline: 1px solid #006408;
-}
+} */
 
 .modal-body label {
     color:#6717cd;
@@ -277,15 +329,32 @@ header .row {
 
 #profile-page #profile-pic img {
     width: 220px;
+    outline: 3px solid #6717cd;
+    border-radius: 10px;
+
 }
 
 #profile-button-options button{
+    font-weight: 600;
     margin:12px;
+    text-decoration: none;
+    font-size: 14px;
 }
 
-#profile-button-options .btn {
-    background-color: #fff;
-    outline:3px solid #6717cd;
+#profile-button-options button:hover {
+    background-color: #c0ec69;
+    transition: 1s;
+}
+
+#profile-button-options button a{
+    
+    text-decoration: none;
+    color: #000;
+}
+
+#profile-button-options .btn{
+    background-color: rgb(251, 251, 251);
+    outline:3px solid #59fb5c;
 }
 
 #profile-name-text a {
@@ -355,9 +424,121 @@ header .row {
 
 
 
+/**            Profile Page               **/
+
+#profile-page  {
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.profile-page-head {
+    padding: 20px;
+    background: linear-gradient(0, rgb(89, 38, 93) 0%, rgb(0, 5, 94) 100%);
+    border-radius: 10px;
+}
+
+#profile-name-text h4 {
+    color: #59fb5c ;
+}
+
+
+.page-bio {
+    padding: 20px;
+    background: linear-gradient(0, rgb(255, 255, 255) 0%, rgb(201, 255, 190) 100%);
+    border-radius: 10px;
+    margin: 20px 0;
+    outline: 1px solid #6717cd;
+}
+
+.page-sites {
+    padding: 20px;
+    background: linear-gradient(0, rgb(255, 255, 255) 0%, rgb(201, 255, 190) 100%);
+    border-radius: 10px;
+    margin: 20px 0;
+    outline: 1px solid #6717cd;
+    font-weight: 700;
+}
+
+.page-sites h3, .profile-page-edit h3 {
+    margin-left: 2rem;
+    color: #120a4e;
+}
+
+.profile-page-edit form {
+    margin-left: 1.6rem;
+}
+
+
+.page-sites a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: #120a4e;
+}
+
+.page-sites a:hover{
+    color: #6717cd;
+    transition: 0.4s;
+}
+
+.profile-page-edit {
+    padding: 20px;
+    background: linear-gradient(0, rgb(255, 255, 255) 0%, rgb(201, 255, 190) 100%);
+    border-radius: 10px;
+    margin: 20px 0;
+    outline: 1px solid #6717cd;
+}
+
+.profile-page-edit form input {
+    padding: .2rem .4rem;
+    border-radius: 5px;
+}
+
+/* .small-profile-pic {
+    width:64px;
+    height: 64px;
+    background-color:rgb(0, 0, 0);
+} */
+
+
+/** Attendee List **/
+
+.attendee-list li a {
+    font-size: 20px;
+    color: #6717cd;
+}
 
 
 
+/** Comments **/
+
+.single-comment {
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    outline:1px solid rgba(189, 227, 143, 0.869);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/** FAQ **/
+
+.row-faq-questions {
+    justify-content: left;
+    text-align: left;
+}
+
+.row-faq-questions ul li{
+    font-weight: 800;
+    font-size: 1.8rem;
+    /* list-style: circle; */
+}
+
+
+#col-events #category-title {
+    font-size: 24px;
+    color: #6717cd;
+    font-weight: 700;
+    text-align: center;
+}
 @media  (max-width: 1200px) { 
     .event-post-buttons button  {
         margin-bottom: 10px;
